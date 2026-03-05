@@ -6,6 +6,7 @@ import ArtworkCard from "../components/ObraCard";
 import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
 import MovementSelector from "../components/MovimientosMenu";
+import { getArtworksByMovement } from "../services/artworks.service";
 
 export default function Home() {
   const [artworks, setArtworks] = useState<Artwork[]>([]);
@@ -19,7 +20,8 @@ export default function Home() {
     setError("");
 
     try {
-      //servicio cuando se defina
+     const data = await getArtworksByMovement(movement);
+     setArtworks(data);
     } catch {
       setError("No se pudieron cargar las obras.");
     } finally {

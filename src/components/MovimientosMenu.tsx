@@ -23,9 +23,9 @@ export default function MovementSelector({ onSelect }: Props) {
         "
       >
         <option value="">Selecciona un movimiento Artístico</option>
+        <option value="Renaissance">Renacimiento</option>
+        <option value="Baroque">Barroco</option>
         <option value="Impressionism">Impresionismo</option>
-        <option value="Cubism">Cubismo</option>
-        <option value="Surrealism">Surrealismo</option>
       </select>
     </div>
   );
