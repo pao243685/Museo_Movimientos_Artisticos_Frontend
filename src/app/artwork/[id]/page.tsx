@@ -43,7 +43,7 @@ export default function ArtworkDetailPage() {
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="bg-stone-900 border border-stone-800 rounded-sm flex items-center justify-center min-h-[300px]">
+          <div className="bg-stone-900 border border-stone-800 rounded-sm flex items-center justify-center max-h-[400px]">
             {artwork.imageUrl ? (
               <Image
                 src={artwork.imageUrl}

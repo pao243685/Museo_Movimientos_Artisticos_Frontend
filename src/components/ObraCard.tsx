@@ -11,7 +11,7 @@ export default function ArtworkCard({ artwork }: Props) {
     <Link href={`/artwork/${artwork.id}`}>
       <div className="border border-stone-800 rounded-sm bg-stone-900 overflow-hidden hover:border-amber-700/50 transition-colors">
         {artwork.imageUrl ? (
-          <div className="relative w-25 h-40">
+          <div className="relative w-full h-60">
             <Image
               src={artwork.imageUrl}
               alt={artwork.title}
