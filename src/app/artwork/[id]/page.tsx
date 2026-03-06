@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { ArtworkDetail } from "@/types/artwork.types";
 import { getArtworkById } from "@/services/artworks.service";
 import Image from "next/image";
+import Loader from "@/components/Loader";
 
 export default function ArtworkDetailPage() {
   const { id } = useParams();
@@ -27,7 +28,7 @@ export default function ArtworkDetailPage() {
     fetch();
   }, [id]);
 
-  if (loading) return <p className="text-center mt-20 text-stone-400">Cargando...</p>;
+  if (loading) return <Loader />;
   if (error) return <p className="text-center mt-20 text-red-400">{error}</p>;
   if (!artwork) return null;
 
