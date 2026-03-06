@@ -43,7 +43,7 @@ export default function ArtworkDetailPage() {
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="bg-stone-900 border border-stone-800 rounded-sm flex items-center justify-center max-h-[400px]">
+          <div className="relative bg-stone-900 border border-stone-800 rounded-sm h-[400px]">
             {artwork.imageUrl ? (
               <Image
                 src={artwork.imageUrl}
@@ -52,10 +52,11 @@ export default function ArtworkDetailPage() {
                 className="object-contain rounded-sm"
               />
             ) : (
-              <p className="text-stone-600 text-sm italic">Sin imagen disponible</p>
+              <p className="absolute inset-0 flex items-center justify-center text-stone-600 text-sm italic">
+                Sin imagen disponible
+              </p>
             )}
           </div>
-
           <div className="flex flex-col gap-5">
             <div>
               <h1 className="text-2xl font-light text-stone-100 leading-snug mb-1">
